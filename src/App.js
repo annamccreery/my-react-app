@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { HomePage, CounterButtonPage, PeopleListPage } from './pages'
 import { CounterButton } from './CounterButton';
 import { CongratulationsMessage } from './CongratulationsMessage';
@@ -17,15 +17,20 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {hideMessage
-        ? null
-        : <CongratulationsMessage 
-          numberOfClicks={numberOfClicks} threshold={10}
-          onHide={ () => setHideMessage(true)}/>}
-       
-        <CounterButton onIncrement={increment} numberOfClicks={numberOfClicks} />
-      </header>
+      <BrowserRouter>
+        <Link to="/">Go to the Home Page </Link>
+        <>&nbsp; &nbsp; &nbsp;</>
+        <Link to="/counter">Go to the Counter Page</Link>
+        <>&nbsp; &nbsp; &nbsp;</>
+        <Link to="/people-list">Go to the People List Page</Link>
+        <Routes>
+          <Route exact path="/" element={ <HomePage /> }>
+          
+          </Route>
+          <Route  exact path="/counter/:name" element={ <CounterButtonPage />} />
+          <Route exact path="/people-list" element={ <PeopleListPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
