@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/" element={ <HomePage /> }>
           
           </Route>
-          <Route  exact path="/counter/:name" element={ <CounterButtonPage />} />
+          <Route  exact path="/counter" element={ <CounterButtonPage />} />
           <Route exact path="/people-list" element={ <PeopleListPage />} />
         </Routes>
       </BrowserRouter>
