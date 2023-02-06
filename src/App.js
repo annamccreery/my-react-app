@@ -1,24 +1,13 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HomePage, CounterButtonPage, PeopleListPage } from './pages'
 import { CounterButton } from './CounterButton';
 import { CongratulationsMessage } from './CongratulationsMessage';
 import { Greeting } from './Greeting';
 import { PeopleList } from './PeopleList';
 import './App.css';
 
-const people = [{
-  name: 'John',
-  age: 40,
-  hairColor: 'brown',
-}, {
-  name: 'Freyja',
-  age: 4,
-  hairColor: 'white',
-}, {
-  name: 'Rocky',
-  age: 2,
-  hairColor: 'brown',
-}];
+
 
 function App() {
   const [numberOfClicks, setNumberOfClicks] = useState(0);
