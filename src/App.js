@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { HomePage, CounterButtonPage, PeopleListPage } from './pages'
+import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage } from './pages'
 import { CounterButton } from './CounterButton';
 import { CongratulationsMessage } from './CongratulationsMessage';
 import { Greeting } from './Greeting';
@@ -29,6 +29,8 @@ function App() {
           </Route>
           <Route  exact path="/counter" element={ <CounterButtonPage />} />
           <Route exact path="/people-list" element={ <PeopleListPage />} />
+          //* indicates path is not exclusive (switch previously required but not any longer)
+          <Route exact path="*" element={ < NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </div>
