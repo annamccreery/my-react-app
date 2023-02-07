@@ -1,5 +1,6 @@
 import { Navigate } from "react-router-dom";
 
+
 export const ProtectedPage = () => {
     const isAuthenticated = false;
     return isAuthenticated 
