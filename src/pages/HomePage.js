@@ -1,10 +1,10 @@
-import React from "react";
 import { Greeting } from '../Greeting';
 
 export const HomePage = () => (
     <>
-        <h1>
-            <Greeting name="Anna" numberOfMessages={10} />
-        </h1>
+    <h1>The Home Page</h1>
+    <Greeting name="Serverless Class 2023" numberOfMessages={18}/>
     </>
-)
+
+    
+);
