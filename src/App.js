@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { 
   HomePage, 
   CounterButtonPage, 
@@ -7,12 +7,12 @@ import {
   NotFoundPage, 
   ProtectedPage, 
   ControlledFormPage,
-  UncontrolledFormPage
+  UncontrolledFormPage,
+  UserProfilePage
 } from './pages'
 import { NavBar }  from './NavBar';
 import './App.css';
 import { FormsNavBar} from './FormsNavBar';
-import { UncontrolledFromPage } from './pages/UncontrolledFormPage';
 
 
 
@@ -32,6 +32,7 @@ function App() {
               <Route  exact path="/counter" element={ <CounterButtonPage />} />
               <Route exact path="/people-list" element={ <PeopleListPage />} />
               <Route exact path="/protected" element={ <ProtectedPage />} />
+              <Route exact path="/user" element={ <UserProfilePage />} />
               <Route path="/forms" element={ <FormsNavBar />} />
                   <Route path="/forms/controlled" element={ <ControlledFormPage />} />
                   <Route path="/forms/uncontrolled" element={ <UncontrolledFormPage />} />
