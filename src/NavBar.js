@@ -14,10 +14,7 @@ export const NavBar = () => {
                 <Link to="/people-list">People List</Link>
             </li>
             <li>
-                <Link to="/controlled">Controlled From</Link>
-            </li>
-            <li>
-                <Link to="uncontrolled">Uncontrolled Page</Link>
+                <Link to="/forms">Forms</Link>
             </li>
         </ul>
     )

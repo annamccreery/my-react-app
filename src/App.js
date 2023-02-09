@@ -11,6 +11,7 @@ import {
 } from './pages'
 import { NavBar }  from './NavBar';
 import './App.css';
+import { FormsNavBar} from './FormsNavBar';
 import { UncontrolledFromPage } from './pages/UncontrolledFormPage';
 
 
@@ -31,8 +32,10 @@ function App() {
               <Route  exact path="/counter" element={ <CounterButtonPage />} />
               <Route exact path="/people-list" element={ <PeopleListPage />} />
               <Route exact path="/protected" element={ <ProtectedPage />} />
-              <Route exact path="/controlled" element={ <ControlledFormPage />} />
-              <Route exact path="/uncontrolled" element={ <UncontrolledFormPage />} />
+              <Route path="/forms" element={ <FormsNavBar />} />
+                  <Route path="/forms/controlled" element={ <ControlledFormPage />} />
+                  <Route path="/forms/uncontrolled" element={ <UncontrolledFormPage />} />
+              <Route path="*" element={ <NotFoundPage />} />
               //* indicates path is not exclusive (switch previously required but not any longer)
               <Route exact path="*" element={ < NotFoundPage />} />
             </Routes>
